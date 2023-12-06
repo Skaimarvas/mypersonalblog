@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+* {
+  font-family: "Inter", sans-serif;
+}
+:root {
+  --light: #8f88ff;
+  --dark: #3a3a3a;
+}
+
+.tags {
+  @apply text-[14px] text-white font-medium leading-[14px] tracking-[-0.7px] bg-[#4731D3] dark:bg-[#8173DA] rounded-[23px] px-[18px] pt-[8px] pb-[9px];
+}
+
+.skillname {
+  @apply skillspan text-[#777] dark:text-white;
+}
+
+.skilldiv {
+  @apply flex gap-[24px] items-center w-fit;
+}
+
+.skillimage {
+  @apply w-[120px] shadow-lg rounded-lg object-cover h-[120px];
+}
+
+.skillspan {
+  @apply text-[24px] font-medium leading-9 uppercase;
+}
+
+.slider {
+  @apply absolute w-full h-full rounded-[50px] transition-all duration-300;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  box-shadow: inset 8px 0px 0px #ffe86e;
+  transition: 0.3s;
+}
+
+.switchlabel {
+  @apply absolute w-[34%] h-[27px] bg-[#28292c] rounded-[50px] cursor-pointer;
+}
+
+.switchinput {
+  @apply absolute hidden;
+}
+
+.switchinput:checked ~ .slider {
+  background-color: var(--light);
+}
+
+.switchinput:checked ~ .slider::before {
+  transform: translateX(37px);
+  background-color: var(--dark);
+  box-shadow: inset 100px 0px 0px #ffe86e;
+}
