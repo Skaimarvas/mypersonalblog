@@ -3,7 +3,7 @@ import React, { useEffect, useContext } from "react";
 import "./App.css";
 //components
 import Skills from "./components/Skills";
-import Header from "./components/header";
+import Header from "./components/Header";
 import AboutMe from "./components/AboutMe";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
